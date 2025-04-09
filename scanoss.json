@@ -1,0 +1,17 @@
+{
+  "settings": {
+    "skip": {
+      "patterns": {},
+      "sizes": {}
+    }
+  },
+  "bom": {
+    "include": [
+      {
+        "path": "copyright.c",
+        "purl": "pkg:github/scanoss/engine",
+        "comment": "demo"
+      }
+    ]
+  }
+}
