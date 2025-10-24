@@ -6,6 +6,12 @@
     }
   },
   "bom": {
+    "include": [
+      {
+        "path": "copyright_2.c",
+        "purl": "pkg:github/scanoss/engine"
+      }
+    ],
     "remove": [
       {
         "path": "copyright.c",
