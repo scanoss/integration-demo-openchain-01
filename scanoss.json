@@ -10,10 +10,6 @@
       {
         "path": "copyright.c",
         "purl": "pkg:github/scanoss/engine"
-      },
-      {
-        "path": "copyright_2.c",
-        "purl": "pkg:github/scanoss/engine"
       }
     ]
   }
