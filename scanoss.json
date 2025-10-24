@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "skip": {
+      "patterns": {},
+      "sizes": {}
+    }
+  },
+  "bom": {
+    "remove": [
+      {
+        "path": "copyright.c",
+        "purl": "pkg:github/scanoss/engine"
+      }
+    ]
+  }
+}

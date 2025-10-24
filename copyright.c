@@ -22,9 +22,9 @@
 
 /**
   * @file copyright.c
-  * @date 27 Nov 2020 
-  * @brief Contains the code and functionalities related witht the copyright processing 
- 
+  * @date 27 Nov 2020
+  * @brief Contains the code and functionalities related witht the copyright processing
+
   * //TODO Long description
   * @see https://github.com/scanoss/engine/blob/master/src/copyright.c
   */
@@ -56,7 +56,7 @@ const char *copyright_sources[] = {"component_declared", "file_header", "license
 	char * result = decrypt_data(data, datalen, oss_copyright, key, subkey);
 	if (result)
 		strncpy(ptr, skip_first_comma((char *) result), MAX_COPYRIGHT);
-	
+
 	free(result);
 	return true;
 }*/
@@ -75,7 +75,7 @@ static void clean_copyright(char *out, char *copyright)
 	{
 		*byte = copyright[i];
 		if (!*byte) break;
-		else if (isalnum(*byte)) out[i] = *byte; 
+		else if (isalnum(*byte)) out[i] = *byte;
 		else if (strstr(" @#^()[]-_+;:.<>",byte)) out[i] = *byte;
 		else out[i] = ' ';
 	}
@@ -139,13 +139,13 @@ void print_copyrights(component_data_t * comp)
 	int len = 0;
 
 	comp->copyright_text = NULL;
-	
+
 	len += sprintf(result+len,"\"copyrights\": [");
 
 	uint32_t crclist[CRC_LIST_LEN];
 	memset(crclist, 0, sizeof(crclist));
 	comp->crclist = crclist;
-	
+
 	uint32_t records = 0;
 
 	records = ldb_fetch_recordset(NULL, oss_copyright, comp->file_md5_ref, false, print_copyrights_item, comp);
@@ -166,6 +166,6 @@ void print_copyrights(component_data_t * comp)
 	else
 		asprintf(&aux, "%s]", result);
 
-	free(comp->copyright_text);	
+	free(comp->copyright_text);
 	comp->copyright_text = aux;
 }
