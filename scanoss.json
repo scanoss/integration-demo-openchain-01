@@ -8,8 +8,9 @@
   "bom": {
     "remove": [
       {
-        "path": "copyright.c",
-        "purl": "pkg:github/scanoss/engine"
+        "path": "scanner_test.py",
+        "purl": "pkg:github/scanoss/scanoss.py",
+        "comment": "this is not scanoss.py"
       }
     ]
   }
