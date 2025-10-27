@@ -5,5 +5,13 @@
       "sizes": {}
     }
   },
-  "bom": {}
+  "bom": {
+    "remove": [
+      {
+        "path": "scanner_test.py",
+        "purl": "pkg:github/scanoss/scanoss.py",
+        "comment": "this is not scanoss.py"
+      }
+    ]
+  }
 }
